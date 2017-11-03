@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org ">
+<meta charset="utf-8"/>
+
+<div th:fragment="header">
+    <h1>首页</h1>
+    <a th:href="@{/reg(userId=1001, loginPwd=123456)}">请求测试</a>
+</div>
+
+</html>
