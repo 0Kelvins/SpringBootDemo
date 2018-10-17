@@ -1,0 +1,11 @@
+CREATE DATABASE `test`;
+
+USE `test`;
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `userId` varchar(100) DEFAULT NULL,
+  `pwd` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;

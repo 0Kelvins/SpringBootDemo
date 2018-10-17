@@ -13,7 +13,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 @Controller
-@EnableAutoConfiguration
 public class HelloWorld {
 
     @Autowired
@@ -26,14 +25,14 @@ public class HelloWorld {
 
     @RequestMapping("/reg")
     @ResponseBody
-    Boolean reg(@RequestParam("loginPwd") String loginNum, @RequestParam("userId") String userId ){
+    Boolean reg(@RequestParam("loginPwd") String loginNum, @RequestParam("userId") String userId) {
         String pwd = creatMD5(loginNum);
         System.out.println(userId + ":" + loginNum);
         regService.regUser(userId, pwd);
         return true;
     }
 
-    private String creatMD5(String loginNum){
+    private String creatMD5(String loginNum) {
         // 生成一个MD5加密计算摘要
         MessageDigest md = null;
         try {
